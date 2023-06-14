@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Cagaya.ViewModels"
+             xmlns:radar="clr-namespace:Cagaya.Controls.RadarBase"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Cagaya.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File很健康">
+                    <MenuItem Header="_Open..."/>
+                    <Separator/>
+                    <MenuItem Header="_Exit合计"/>
+                </MenuItem>
+                <MenuItem Header="_Edit">
+                    <MenuItem Header="Co沟沟壑壑家"/>
+                    <MenuItem Header="Paste"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <TextBlock Text="{Binding Greeting}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+            <Button Content="4342jklfek" FontSize="20" Click="Button_OnClick"></Button>
+            <radar:BaseRadarDisplay Width="1920" Height="1080"></radar:BaseRadarDisplay>
+        </StackPanel>
+    </Grid>
+    
+ 
+  
+</UserControl>
