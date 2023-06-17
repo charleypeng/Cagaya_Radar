@@ -12,13 +12,14 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        
-        <DockPanel Grid.Row="0">
+        <DockPanel Grid.Row="1">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File很健康">
                     <MenuItem Header="_Open..."/>
@@ -31,7 +32,7 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <StackPanel Grid.Row="1" Orientation="Vertical">
+        <StackPanel Grid.Row="2" Orientation="Vertical">
             <TextBlock Text="{Binding Greeting}" 
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center"/>

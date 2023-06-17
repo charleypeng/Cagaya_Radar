@@ -8,5 +8,13 @@
         x:Class="Cagaya.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Cagaya">
-        <views:MainView />
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="Check For Updates..." Gesture="cmd+u" IsEnabled="True"></NativeMenuItem>
+            <NativeMenuItemSeparator/>
+            <NativeMenuItem Header="Preferences." Gesture="cmd+u" IsEnabled="True"></NativeMenuItem>
+        </NativeMenu>
+        
+    </NativeMenu.Menu>
+    <views:MainView/>
 </Window>

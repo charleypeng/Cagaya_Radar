@@ -1,4 +1,4 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{356C8287-6C37-4A2A-AA36-85695388F70F}|Default">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1B6A6066-23A9-4F2C-B594-D05EEEB1B31E}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Cagaya.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008027-001510E93C78402E" />
   <MonoDevelop.Ide.ItemProperties.Cagaya.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
@@ -7,9 +7,9 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Cagaya.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Cagaya.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml">
     <Files>
-      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" Line="19" Column="11" />
       <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml.cs" />
       <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" />
       <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml.cs" />
@@ -18,7 +18,8 @@
       <File FileName="Cagaya/Cagaya/ViewModels/ViewModelBase.cs" />
       <File FileName="Cagaya/Cagaya.iOS/Main.cs" />
       <File FileName="Cagaya/Cagaya.iOS/Cagaya.iOS.csproj" />
-      <File FileName="Cagaya/Cagaya/Cagaya.csproj" Line="9" Column="1" />
+      <File FileName="Cagaya/Cagaya/Cagaya.csproj" Line="4" Column="12" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" Line="18" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +27,9 @@
           <Node name="Cagaya" expanded="True">
             <Node name="Cagaya" expanded="True">
               <Node name="Controls" expanded="True">
-                <Node name="RadarBase" expanded="True" />
+                <Node name="RadarBase" expanded="True">
+                  <Node name="Models" expanded="True" />
+                </Node>
               </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />

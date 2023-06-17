@@ -3,8 +3,10 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Cagaya/Cagaya/App.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
         <entry key="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
         <entry key="Cagaya/Cagaya/Views/MainView.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
+        <entry key="Cagaya/Cagaya/Views/MainWindow.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
       </map>
     </option>
   </component>
