@@ -7,13 +7,7 @@ public static class General
     public static double? Reset(this double? item, double max)
     {
         var rd = new Random();
-        int it = 1;
-        if (item > max)
-        {
-            it = rd.Next(0, (int)max);
-        }
-
-        return it;
+        return item > max? rd.Next(0, (int)max) : item;
     }
     /// <summary>
     /// Name Generator

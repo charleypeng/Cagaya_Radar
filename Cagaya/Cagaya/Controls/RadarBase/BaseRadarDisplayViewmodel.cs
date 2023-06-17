@@ -30,7 +30,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
     {
         Targets = new ObservableCollection<CanvasItem<Target>>();
         var rd1 = new Random();
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 10000; i++)
         {
             var target = new Target
             {
@@ -60,15 +60,22 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         {
             foreach (var t in Targets)
             {
-                t.Left.Reset(1920);
-                t.Top.Reset(1080);
+                if (t.Top > 1080)
+                {
+                    t.Top = 10;
+                }
+
+                if (t.Left > 1920)
+                {
+                    t.Left = 10;
+                }
                 var left = rd1.Next(3,100);
                 var top = rd1.Next(20, 50);
                 t.Left += left;
                 t.Top += top;
             }
 
-            await Task.Delay(TimeSpan.FromSeconds(1.5));
+            await Task.Delay(TimeSpan.FromSeconds(0.8));
         }
         
     }
