@@ -18,5 +18,9 @@ public partial class MainView : UserControl
 
         await Task.Delay(TimeSpan.FromSeconds(2));
         this.Background = Brushes.BurlyWood;
+        
+        //var mapControl = new Mapsui.UI.Avalonia.V0.MapControl();
+        //mapControl.Map?.Layers.Add(Mapsui.Tiling.OpenStreetMap.CreateTileLayer());
+        //Content = mapControl;
     }
 }

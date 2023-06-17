@@ -36,7 +36,7 @@
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center"/>
             <Button Content="4342jklfek" FontSize="20" Click="Button_OnClick"></Button>
-            <radar:BaseRadarDisplay Width="1920" Height="1080"></radar:BaseRadarDisplay>
+           <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
         </StackPanel>
     </Grid>
     

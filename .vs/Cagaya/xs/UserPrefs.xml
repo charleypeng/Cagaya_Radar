@@ -1,5 +1,44 @@
-﻿<Properties StartupConfiguration="{1C377290-FA5E-4620-83E6-A1EC9EEEBB41}|Default" GitUserInfo="UsingMD">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Cagaya.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.00FC445D-56B0-4A8E-8057-860F55C4223C" />
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{356C8287-6C37-4A2A-AA36-85695388F70F}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008027-001510E93C78402E" />
   <MonoDevelop.Ide.ItemProperties.Cagaya.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.Browser PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Cagaya.csproj">
+    <Files>
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml.cs" />
+      <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" />
+      <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml.cs" />
+      <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml" />
+      <File FileName="Cagaya/Cagaya/ViewModels/MainViewModel.cs" />
+      <File FileName="Cagaya/Cagaya/ViewModels/ViewModelBase.cs" />
+      <File FileName="Cagaya/Cagaya.iOS/Main.cs" />
+      <File FileName="Cagaya/Cagaya.iOS/Cagaya.iOS.csproj" />
+      <File FileName="Cagaya/Cagaya/Cagaya.csproj" Line="9" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cagaya" expanded="True">
+            <Node name="Cagaya" expanded="True">
+              <Node name="Controls" expanded="True">
+                <Node name="RadarBase" expanded="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+            <Node name="Cagaya.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
 </Properties>

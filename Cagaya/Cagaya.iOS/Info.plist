@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Cagaya</string>
 	<key>CFBundleIdentifier</key>
-	<string>companyName.Cagaya</string>
+	<string>com.charleypeng.Cagaya</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
