@@ -1,0 +1,20 @@
+﻿<Window x:Class="Cagaya.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cagaya"
+        xmlns:vm="clr-namespace:Cagaya.ViewModels"
+        xmlns:radar="clr-namespace:Cagaya.Controls.RadarBase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
+    </Grid>
+</Window>

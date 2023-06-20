@@ -73,6 +73,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
                 var top = rd1.Next(20, 50);
                 t.Left += left;
                 t.Top += top;
+                await Task.Delay(1000);
             }
 
             await Task.Delay(TimeSpan.FromSeconds(0.8));
