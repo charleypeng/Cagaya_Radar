@@ -1,9 +1,30 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq.Expressions;
+using System.Linq;
+using DynamicData;
 
 namespace Cagaya;
 
 public static class General
 {
+    public static void ReplaceIfNotEqual<T>(this ICollection<T> collection, Func<T,bool> match, T newItem)
+    {
+        var oldItem = collection.FirstOrDefault(match);
+        if (oldItem == null)
+        {
+            return;
+        }
+
+        var index = collection.IndexOf(oldItem);
+
+        if (index >= 0)
+        {
+            //collection[index] = newItem;
+        }
+    }
     public static double? Reset(this double? item, double max)
     {
         var rd = new Random();

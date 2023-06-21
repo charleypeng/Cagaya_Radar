@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using Cagaya.Controls.RadarBase.Models;
 using Cagaya.Models;
 using ReactiveUI;
 using CommunityToolkit.Mvvm.ComponentModel;
+using DynamicData;
 
 namespace Cagaya.Controls.RadarBase;
 
@@ -15,7 +17,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
     public string? LookIntoYou { get; set; }
     public double? CWidth { get; set; } = 500;
     public double? CHeight { get; set; } = 400;
-
+    private event EventHandler? radarOutput;
     public double? OWidth { get; set; } = 10;
     public double? OHeight { get; set; } = 10;
     public BaseRadarDisplayViewModel()
@@ -24,13 +26,34 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         this.LookIntoYou = "fjdksjfakl福建对空射击饭卡了";
         initTargets();
         this.ShowMeTheMoney();
+        this.radarOutput += OnradarOutput;
+    }
+
+    private void OnradarOutput(object? sender, EventArgs e)
+    {
+        var _target = sender as CanvasItem<Target>;
+        if (_target == null) return;
+        var target = Targets?.SingleOrDefault(x => x.Item?.Id == _target.Item?.Id);
+        if (target != null)
+        {
+            if (target?.Equals(_target) == true) return;
+            var index = Targets?.IndexOf(target!);
+            if (index == null) return;
+            target!.Left = _target?.Left;
+            target.Top = _target?.Top;
+        }
+    }
+
+    private async Task radarEmulator()
+    {
+        
     }
 
     private async void initTargets()
     {
         Targets = new ObservableCollection<CanvasItem<Target>>();
         var rd1 = new Random();
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 500; i++)
         {
             var target = new Target
             {
@@ -60,25 +83,30 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         {
             foreach (var t in Targets)
             {
-                if (t.Top > 1080)
+                var _t = new CanvasItem(t.Left!.Value, t.Top!.Value, 0, new Target()
                 {
-                    t.Top = 10;
+                    StrokeColor = t.Item?.StrokeColor,
+                    CallSign = t.Item?.CallSign,
+                    Id = t.Item?.Id
+                });
+                if (_t.Top > 1080)
+                {
+                    _t.Top = 10;
                 }
 
-                if (t.Left > 1920)
+                if (_t.Left > 1920)
                 {
-                    t.Left = 10;
+                    _t.Left = 10;
                 }
                 var left = rd1.Next(3,100);
                 var top = rd1.Next(20, 50);
-                t.Left += left;
-                t.Top += top;
-                await Task.Delay(1000);
+                _t.Left += left;
+                _t.Top += top;
+                
+                radarOutput?.Invoke(_t, null!);
+                await Task.Delay(10);
             }
-
-            await Task.Delay(TimeSpan.FromSeconds(0.8));
         }
-        
     }
     private async void starter(Target? target)
     {
