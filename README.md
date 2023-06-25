@@ -17,5 +17,6 @@ dotnet restore && dotnet run
 
 #### MIT Lisence
 
+#### Thanks to [Jetbrains Rider]https://www.jetbrains.com/rider/
 
 
