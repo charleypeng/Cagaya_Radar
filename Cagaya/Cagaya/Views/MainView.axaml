@@ -19,28 +19,25 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+       <Canvas>
+
+       </Canvas>
         <DockPanel Grid.Row="1">
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File很健康">
+                <MenuItem Header="OpenMe">
                     <MenuItem Header="_Open..."/>
                     <Separator/>
-                    <MenuItem Header="_Exit合计"/>
+                    <MenuItem Header="Toggle"/>
                 </MenuItem>
                 <MenuItem Header="_Edit">
-                    <MenuItem Header="Co沟沟壑壑家"/>
+                    <MenuItem Header="Undo"/>
                     <MenuItem Header="Paste"/>
                 </MenuItem>
             </Menu>
-        </DockPanel>
+       </DockPanel>
         <StackPanel Grid.Row="2" Orientation="Vertical">
-            <TextBlock Text="{Binding Greeting}" 
-                       HorizontalAlignment="Center" 
-                       VerticalAlignment="Center"/>
-            <Button Content="4342jklfek" FontSize="20" Click="Button_OnClick"></Button>
+            <Button Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
            <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
         </StackPanel>
     </Grid>
-    
- 
-  
 </UserControl>

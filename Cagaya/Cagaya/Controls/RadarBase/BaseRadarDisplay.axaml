@@ -15,10 +15,12 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Canvas Grid.Row="0" x:Name="cvs" Background="Gray" >
-            <Button Name="btntest" Click="Btntest_OnClick">fewr激发快乐健康</Button>
+            <Button Name="btntest" Click="Btntest_OnClick">FastMove</Button>
+            <vm:RadarTarget></vm:RadarTarget>
             <Ellipse Stroke="Firebrick" 
                      Fill="Chartreuse" 
-                     ContextMenu="{}" 
+                     ContextMenu="{}"
+                     
                      Height="{Binding OHeight}" 
                      Width="{Binding OWidth}" 
                      Canvas.Left="{Binding CWidth, Mode=TwoWay}" 
@@ -33,7 +35,7 @@
             
             <ItemsControl.Styles>
                 <Style Selector="ItemsControl > ContentPresenter" x:DataType="c:CanvasItem">
-                    <Setter Property="Canvas.Left" Value="{Binding Left }"/>
+                    <Setter Property="Canvas.Left" Value="{Binding Left}"/>
                     <Setter Property="Canvas.Top" Value="{Binding Top}"/>
                 </Style>
             </ItemsControl.Styles>
@@ -42,6 +44,7 @@
                     <StackPanel Orientation="Horizontal" 
                                 Canvas.Left="{Binding Left}"
                                 Canvas.Top="{Binding Top}">
+                        <TextBox Text="Run Fast!"></TextBox>
                         <TextBlock Text="{Binding Path=Item.CallSign}"></TextBlock>
                         <Ellipse Stroke="Red" 
                                  StrokeThickness="2"

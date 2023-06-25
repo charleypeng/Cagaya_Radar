@@ -48,7 +48,7 @@ public static class General
             string Name = "";
             Name += consonants[r.Next(consonants.Length)].ToUpper();
             Name += vowels[r.Next(vowels.Length)];
-            int b = 2; //b tells how many times a new letter has been added. It's 2 right now because the first two letters are already in the name.
+            var b = 2; //b tells how many times a new letter has been added. It's 2 right now because the first two letters are already in the name.
             while (b < len)
             {
                 Name += consonants[r.Next(consonants.Length)];

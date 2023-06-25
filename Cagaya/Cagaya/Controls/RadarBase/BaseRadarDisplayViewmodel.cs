@@ -23,7 +23,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
     public BaseRadarDisplayViewModel()
     {
 
-        this.LookIntoYou = "fjdksjfakl福建对空射击饭卡了";
+        this.LookIntoYou = "Rust me!";
         initTargets();
         this.ShowMeTheMoney();
         this.radarOutput += OnradarOutput;
@@ -53,7 +53,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
     {
         Targets = new ObservableCollection<CanvasItem<Target>>();
         var rd1 = new Random();
-        for (int i = 0; i < 500; i++)
+        for (int i = 0; i < 60; i++)
         {
             var target = new Target
             {
@@ -104,7 +104,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
                 _t.Top += top;
                 
                 radarOutput?.Invoke(_t, null!);
-                await Task.Delay(10);
+                await Task.Delay(100);
             }
         }
     }
