@@ -10,6 +10,57 @@ namespace Cagaya;
 
 public static class General
 {
+    /// <summary>
+    /// To check whether the given string is null or empty white space
+    /// </summary>
+    /// <param name="str"></param>
+    /// <returns></returns>
+    public static bool IsEmptyString(this string str)
+    {
+        return !string.IsNullOrWhiteSpace(str);
+    }
+    /// <summary>
+    /// To assume a certain string reversely contains in a certain string 
+    /// </summary>
+    /// <param name="str1">basic string</param>
+    /// <param name="str2">the given string</param>
+    /// <returns></returns>
+    public static bool ReverseContain(this string str1, string str2)
+    {
+        if (string.IsNullOrEmpty(str1) || string.IsNullOrEmpty(str2))
+            return false;
+
+        return str2.Contains(str1);
+    }
+    /// <summary>
+    /// Add Non-Null object into a list
+    /// </summary>
+    /// <param name="lst">non-empty list</param>
+    /// <param name="item">item object</param>
+    /// <typeparam name="T">given object type</typeparam>
+    public static void AddNonNullListObject<T>(this IList<IEnumerable<T>>? lst, IEnumerable<T>? item)
+    {
+        if (item == null)
+        {
+            return;
+        }
+
+        var enumerable = item.ToList();
+        if (!enumerable.IsNullOrEmpty())
+        {
+            lst?.Add(enumerable);
+        }
+    }
+    /// <summary>
+    /// To ensure whether the given list is null or empty
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="list"></param>
+    /// <returns></returns>
+    public static bool IsNullOrEmpty<T>(this IEnumerable<T>? list)
+    {
+        return list == null || list?.Count() == 0;
+    }
     public static void ReplaceIfNotEqual<T>(this ICollection<T> collection, Func<T,bool> match, T newItem)
     {
         var oldItem = collection.FirstOrDefault(match);
@@ -59,7 +110,46 @@ public static class General
 
             return Name;
         }
+    }
+    
+    /// <summary>
+    /// returns a boolean where collection1 equals collection2 no matter the order
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="comparer1">integer list</param>
+    /// <param name="comparer2">integer list</param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
+    public static bool SameAs<T>(this IEnumerable<T>? comparer1, IEnumerable<T>? comparer2)
+    {
+        var myObject = Activator.CreateInstance<T>();
 
-        
+        var myLong = myObject as long?;
+
+        if (myLong == null)
+            throw new Exception($"the given type '{typeof(T)}' should be integer");
+
+        if (comparer1 == null || comparer2 == null)
+            return false;
+
+        if (comparer1 == null && comparer2 == null)
+            return true;
+
+        if(comparer1?.Count() != comparer2?.Count())
+            return false;
+
+        var c1 = comparer1?.OrderBy(x=>x).ToList();
+        var c2 = comparer2?.OrderBy(x=>x).ToList();
+
+        bool isSame = false;
+        for (var i = 0; i < c1?.Count; i++)
+        {
+            isSame = c1[i]!.Equals(c2![i]);
+
+            if (!isSame)
+                break;
+        }
+
+        return isSame;
     }
 }
