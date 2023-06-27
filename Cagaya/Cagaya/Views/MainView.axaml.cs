@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media;
-
+using System.Speech.Synthesis;
 namespace Cagaya.Views;
 
 public partial class MainView : UserControl
@@ -16,7 +16,8 @@ public partial class MainView : UserControl
     private async void Button_OnClick(object? sender, RoutedEventArgs e)
     {
 
-        await Task.Delay(TimeSpan.FromSeconds(2));
+        var spk = new Cagaya.Synthesis.Speech();
+        await spk.Speek("福建杜康");
         this.Background = Brushes.BurlyWood;
         
         //var mapControl = new Mapsui.UI.Avalonia.V0.MapControl();
