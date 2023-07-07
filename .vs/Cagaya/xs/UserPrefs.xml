@@ -1,18 +1,19 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1B6A6066-23A9-4F2C-B594-D05EEEB1B31E}|Default">
   <MonoDevelop.Ide.ItemProperties.Cagaya.Browser PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Views/MainView.axaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Views/MainView.axaml">
     <Files>
-      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" Line="11" Column="1" />
-      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml.cs" Line="20" Column="6" />
-      <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" Line="19" Column="1" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml.cs" />
+      <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" Line="18" Column="9" />
       <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml.cs" />
       <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml" />
-      <File FileName="Cagaya/Cagaya/ViewModels/MainViewModel.cs" Line="1" Column="1" />
-      <File FileName="Cagaya/Cagaya/ViewModels/ViewModelBase.cs" Line="1" Column="1" />
+      <File FileName="Cagaya/Cagaya/ViewModels/MainViewModel.cs" />
+      <File FileName="Cagaya/Cagaya/ViewModels/ViewModelBase.cs" />
       <File FileName="Cagaya/Cagaya.iOS/Main.cs" />
       <File FileName="Cagaya/Cagaya.iOS/Cagaya.iOS.csproj" />
       <File FileName="Cagaya/Cagaya/Cagaya.csproj" />
-      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" Line="9" Column="12" />
+      <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" />
+      <File FileName="Cagaya/Cagaya/Views/MainView.axaml" Line="20" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,9 +27,7 @@
               </Node>
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="MainView.axaml" expanded="True">
-                  <Node name="MainView.axaml.cs" selected="True" />
-                </Node>
+                <Node name="MainView.axaml" expanded="True" selected="True" />
               </Node>
             </Node>
             <Node name="Cagaya.iOS" expanded="True" />

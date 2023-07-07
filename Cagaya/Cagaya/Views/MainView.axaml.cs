@@ -15,9 +15,10 @@ public partial class MainView : UserControl
 
     private async void Button_OnClick(object? sender, RoutedEventArgs e)
     {
-
+        this.btn.IsEnabled = false;
         var spk = new Cagaya.Synthesis.Speech();
         await spk.Speek("福建杜康");
+        this.btn.IsEnabled = true;
         this.Background = Brushes.BurlyWood;
         
         //var mapControl = new Mapsui.UI.Avalonia.V0.MapControl();

@@ -36,7 +36,7 @@
             </Menu>
        </DockPanel>
         <StackPanel Grid.Row="2" Orientation="Vertical">
-            <Button Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
+            <Button Name="btn" Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
            <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
         </StackPanel>
     </Grid>
