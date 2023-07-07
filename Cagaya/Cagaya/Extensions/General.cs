@@ -19,6 +19,7 @@ public static class General
     {
         return !string.IsNullOrWhiteSpace(str);
     }
+    
     /// <summary>
     /// To assume a certain string reversely contains in a certain string 
     /// </summary>
@@ -59,7 +60,7 @@ public static class General
     /// <returns></returns>
     public static bool IsNullOrEmpty<T>(this IEnumerable<T>? list)
     {
-        return list == null || list?.Count() == 0;
+        return list == null || !list.Any();
     }
     public static void ReplaceIfNotEqual<T>(this ICollection<T> collection, Func<T,bool> match, T newItem)
     {
