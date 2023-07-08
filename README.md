@@ -14,6 +14,8 @@ dotnet restore && dotnet run
 * mac os
 * ios
 * android
+* linux
+
 
 #### MIT Lisence
 
