@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:Cagaya.ViewModels"
              xmlns:radar="clr-namespace:Cagaya.Controls.RadarBase"
+             xmlns:charts="clr-namespace:Cagaya.Controls.Charts"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Cagaya.Views.MainView"
              x:DataType="vm:MainViewModel">
@@ -12,32 +13,39 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-       <Canvas>
+    <TabControl>
+        <TabItem Header="Radar">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Canvas>
 
-       </Canvas>
-        <DockPanel Grid.Row="1">
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="OpenMe">
-                    <MenuItem Header="_Open..."/>
-                    <Separator/>
-                    <MenuItem Header="Toggle"/>
-                </MenuItem>
-                <MenuItem Header="_Edit">
-                    <MenuItem Header="Undo"/>
-                    <MenuItem Header="Paste"/>
-                </MenuItem>
-            </Menu>
-       </DockPanel>
-        <StackPanel Grid.Row="2" Orientation="Vertical">
-            <Button Name="btn" Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
-           <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
-        </StackPanel>
-    </Grid>
+                </Canvas>
+                <DockPanel Grid.Row="1">
+                    <Menu DockPanel.Dock="Top">
+                        <MenuItem Header="OpenMe">
+                            <MenuItem Header="_Open..."/>
+                            <Separator/>
+                            <MenuItem Header="Toggle"/>
+                        </MenuItem>
+                        <MenuItem Header="_Edit">
+                            <MenuItem Header="Undo"/>
+                            <MenuItem Header="Paste"/>
+                        </MenuItem>
+                    </Menu>
+                </DockPanel>
+                <StackPanel Grid.Row="2" Orientation="Vertical">
+                    <Button Name="btn" Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
+                    <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Racing追赶图表">
+            <charts:RacingChart></charts:RacingChart>
+        </TabItem>
+    </TabControl>
+    
 </UserControl>

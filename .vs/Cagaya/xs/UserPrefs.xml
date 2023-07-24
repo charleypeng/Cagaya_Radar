@@ -1,10 +1,18 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{1B6A6066-23A9-4F2C-B594-D05EEEB1B31E}|Default">
+﻿<Properties StartupConfiguration="{1B6A6066-23A9-4F2C-B594-D05EEEB1B31E}|Default" GitUserInfo="UsingMD">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008027-001510E93C78402E" />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
+  <MonoDevelop.Ide.ItemProperties.Cagaya.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Cagaya.Browser PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Views/MainView.axaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cagaya/Cagaya/Synthesis/Speech.cs">
     <Files>
       <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplayViewmodel.cs" />
       <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml.cs" />
-      <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" Line="18" Column="9" />
+      <File FileName="Cagaya/Cagaya/Views/MainView.axaml.cs" />
       <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml.cs" />
       <File FileName="Cagaya/Cagaya/Views/MainWindow.axaml" />
       <File FileName="Cagaya/Cagaya/ViewModels/MainViewModel.cs" />
@@ -13,22 +21,24 @@
       <File FileName="Cagaya/Cagaya.iOS/Cagaya.iOS.csproj" />
       <File FileName="Cagaya/Cagaya/Cagaya.csproj" />
       <File FileName="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" />
-      <File FileName="Cagaya/Cagaya/Views/MainView.axaml" Line="20" Column="50" />
+      <File FileName="Cagaya/Cagaya/Views/MainView.axaml" Line="10" Column="15" />
+      <File FileName="Cagaya/Cagaya/Synthesis/Speech.cs" Line="45" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Cagaya" expanded="True">
+          <Node name="Cagaya">
             <Node name="Cagaya" expanded="True">
               <Node name="Controls" expanded="True">
                 <Node name="RadarBase" expanded="True">
                   <Node name="BaseRadarDisplay.axaml" expanded="True" />
                 </Node>
               </Node>
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="MainView.axaml" expanded="True" selected="True" />
+              <Node name="Synthesis" expanded="True">
+                <Node name="Speech.cs" selected="True" />
               </Node>
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
             </Node>
             <Node name="Cagaya.iOS" expanded="True" />
           </Node>
@@ -36,15 +46,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Cagaya.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Cagaya.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008027-001510E93C78402E" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Cagaya.Desktop PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.46" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
 </Properties>

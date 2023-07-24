@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Cagaya/Cagaya/App.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
+        <entry key="Cagaya/Cagaya/Controls/Charts/RacingChart.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
         <entry key="Cagaya/Cagaya/Controls/RadarBase/BaseRadarDisplay.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
         <entry key="Cagaya/Cagaya/Controls/RadarBase/RadarTarget.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
         <entry key="Cagaya/Cagaya/Views/MainView.axaml" value="Cagaya/Cagaya.Browser/Cagaya.Browser.csproj" />
