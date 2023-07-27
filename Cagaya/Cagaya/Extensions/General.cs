@@ -123,11 +123,10 @@ public static class General
     /// <exception cref="Exception"></exception>
     public static bool SameAs<T>(this IEnumerable<T>? comparer1, IEnumerable<T>? comparer2)
     {
+        // ReSharper disable once HeapView.ObjectAllocation.Possible
         var myObject = Activator.CreateInstance<T>();
 
-        var myLong = myObject as long?;
-
-        if (myLong == null)
+        if (myObject is not long myLong)
             throw new Exception($"the given type '{typeof(T)}' should be integer");
 
         if (comparer1 == null || comparer2 == null)
