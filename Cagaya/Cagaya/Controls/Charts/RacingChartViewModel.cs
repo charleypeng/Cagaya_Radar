@@ -26,7 +26,7 @@ public partial class RacingChartViewModel : ObservableObject
         ("Bottas", 550),
         ("Perez", 660),
         ("Verstapen", 920),
-        ("ÄãºÃÂð", 1000)
+        ("ï¿½ï¿½ï¿½ï¿½ï¿½", 1000)
     };
 
     [ObservableProperty]

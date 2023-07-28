@@ -44,11 +44,6 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         }
     }
 
-    private async Task radarEmulator()
-    {
-        
-    }
-
     private async void initTargets()
     {
         Targets = new ObservableCollection<CanvasItem<Target>>();
@@ -108,14 +103,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
             }
         }
     }
-    private async void starter(Target? target)
-    {
-        if (target == null)
-        {
-            return;
-        }
-    }
-    
+
     private async void ShowMeTheMoney()
     {
         await Task.Delay(TimeSpan.FromSeconds(1));

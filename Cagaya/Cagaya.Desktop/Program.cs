@@ -20,20 +20,21 @@ class Program
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
     {
-        LiveChartsSkiaSharp.DefaultSKTypeface = SKFontManager.Default.MatchCharacter('汉');
+        LiveChartsSkiaSharp.DefaultSKTypeface = SKFontManager.Default.MatchCharacter('彭');
 
         var options = new FontManagerOptions();
 
         if(OperatingSystem.IsLinux())
         {
-            options.DefaultFamilyName = "ubuntu";
+            options.DefaultFamilyName = "Noto Sans CJK SC";
         }
 
         return AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace()
-            .UseReactiveUI();
+            .UseReactiveUI()
+            .With(options);
 
     }
 }

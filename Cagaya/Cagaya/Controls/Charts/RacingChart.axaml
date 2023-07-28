@@ -12,8 +12,6 @@
         </Grid.RowDefinitions>
         <lvc:CartesianChart
             FontSize="9"
-			FontFamily="yahei"
-            DesiredSize=""
             x:DataType="vms:RacingChartViewModel"
             Series="{Binding Series}"
             XAxes="{Binding XAxes}"
