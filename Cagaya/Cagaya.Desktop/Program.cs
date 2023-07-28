@@ -1,5 +1,7 @@
 ﻿using System;
 using Avalonia;
+using Avalonia.Controls.Platform;
+using Avalonia.Media;
 using Avalonia.ReactiveUI;
 using LiveChartsCore.SkiaSharpView;
 using SkiaSharp;
@@ -19,6 +21,13 @@ class Program
     public static AppBuilder BuildAvaloniaApp()
     {
         LiveChartsSkiaSharp.DefaultSKTypeface = SKFontManager.Default.MatchCharacter('汉');
+
+        var options = new FontManagerOptions();
+
+        if(OperatingSystem.IsLinux())
+        {
+            options.DefaultFamilyName = "ubuntu";
+        }
 
         return AppBuilder.Configure<App>()
             .UsePlatformDetect()
