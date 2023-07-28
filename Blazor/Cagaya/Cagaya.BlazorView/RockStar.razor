@@ -1,0 +1,10 @@
+<h3>@Title</h3>
+<button @onclick="@SetTitle">hahahhahaha哈哈</button>
+@code {
+    public string? Title { get; set; }
+
+    public void SetTitle()
+    {
+        Title = Guid.NewGuid().ToString("N");
+    }
+}
