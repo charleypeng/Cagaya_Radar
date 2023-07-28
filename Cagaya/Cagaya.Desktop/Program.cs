@@ -1,6 +1,8 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.ReactiveUI;
+using LiveChartsCore.SkiaSharpView;
+using SkiaSharp;
 
 namespace Cagaya.Desktop;
 
@@ -15,9 +17,14 @@ class Program
 
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
+    {
+        LiveChartsSkiaSharp.DefaultSKTypeface = SKFontManager.Default.MatchCharacter('汉');
+
+        return AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace()
             .UseReactiveUI();
+
+    }
 }
