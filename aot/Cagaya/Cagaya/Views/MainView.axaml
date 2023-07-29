@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Cagaya.ViewModels"
+             xmlns:radar="clr-namespace:Cagaya.Controls.RadarBase"
+             xmlns:charts="clr-namespace:Cagaya.Controls.Charts"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Cagaya.Views.MainView"
+             x:DataType="vm:MainWindowViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+    <TabControl>
+        <TabItem Header="Radar">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Canvas>
+
+                </Canvas>
+                <DockPanel Grid.Row="1">
+                    <Menu DockPanel.Dock="Top">
+                        <MenuItem Header="OpenMe">
+                            <MenuItem Header="_Open..." Click="MenuItem_OnClick"/>
+                            <Separator/>
+                            <MenuItem Header="Toggle"/>
+                        </MenuItem>
+                        <MenuItem Header="_Edit">
+                            <MenuItem Header="Undo"/>
+                            <MenuItem Header="Paste"/>
+                        </MenuItem>
+                    </Menu>
+                </DockPanel>
+                <StackPanel Grid.Row="2" Orientation="Vertical">
+                    <Button Name="btn" Content="Change Backgroud"  FontSize="20" Click="Button_OnClick"></Button>
+                    <radar:BaseRadarDisplay MinWidth="600" MinHeight="600"></radar:BaseRadarDisplay>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Racing追赶图表">
+            <charts:RacingChart></charts:RacingChart>
+        </TabItem>
+    </TabControl>
+    
+</UserControl>

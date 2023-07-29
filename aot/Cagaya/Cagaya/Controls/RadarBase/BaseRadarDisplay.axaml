@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Cagaya.Controls.RadarBase.BaseRadarDisplay"
+             xmlns:c="clr-namespace:Cagaya.Models"
+             xmlns:t="clr-namespace:Cagaya.Controls.RadarBase.Models"
+             xmlns:vm="clr-namespace:Cagaya.Controls.RadarBase"
+             x:DataType="vm:BaseRadarDisplayViewModel"
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"> </RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" x:Name="cvs" Background="Gray" >
+            <Button Name="btntest" Click="Btntest_OnClick">FastMove</Button>
+            <vm:RadarTarget></vm:RadarTarget>
+            <Ellipse Stroke="Firebrick" 
+                     Fill="Chartreuse" 
+                     ContextMenu="{}"
+                     
+                     Height="{Binding OHeight}" 
+                     Width="{Binding OWidth}" 
+                     Canvas.Left="{Binding CWidth, Mode=TwoWay}" 
+                     Canvas.Top="{Binding CHeight, Mode=TwoWay}"/>
+        </Canvas>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding  Targets}" >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas Width="1920" Height="1080" Background="Gray"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            
+            <ItemsControl.Styles>
+                <Style Selector="ItemsControl > ContentPresenter" x:DataType="c:CanvasItem">
+                    <Setter Property="Canvas.Left" Value="{Binding Left}"/>
+                    <Setter Property="Canvas.Top" Value="{Binding Top}"/>
+                </Style>
+            </ItemsControl.Styles>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" 
+                                Canvas.Left="{Binding Left}"
+                                Canvas.Top="{Binding Top}">
+                        <TextBox Text="Run Fast!"></TextBox>
+                        <TextBlock Text="{Binding Path=Item.CallSign}"></TextBlock>
+                        <Ellipse Stroke="Red" 
+                                 StrokeThickness="2"
+                                 Width="10" 
+                                 Height="10"
+                                 Fill="Transparent"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

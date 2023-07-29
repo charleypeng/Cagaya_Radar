@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cagaya", "Cagaya\Cagaya.csproj", "{118A6FE0-787A-4A30-85AB-B81B5E84C125}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{118A6FE0-787A-4A30-85AB-B81B5E84C125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118A6FE0-787A-4A30-85AB-B81B5E84C125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118A6FE0-787A-4A30-85AB-B81B5E84C125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118A6FE0-787A-4A30-85AB-B81B5E84C125}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
