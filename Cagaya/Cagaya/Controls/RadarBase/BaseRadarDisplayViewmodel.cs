@@ -46,20 +46,24 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
 
     private async void initTargets()
     {
-        Targets = new ObservableCollection<CanvasItem<Target>>();
-        var rd1 = new Random();
-        for (int i = 0; i < 60; i++)
+        await Task.Run(() =>
         {
-            var target = new Target
+            Targets = new ObservableCollection<CanvasItem<Target>>();
+            var rd1 = new Random();
+            for (int i = 0; i < 700; i++)
             {
-                StrokeColor = "Red",
-                Width = 10,
-                Height = 10,
-                CallSign = General.NameGenerator.GenerateName(7)
-            };
+                var target = new Target
+                {
+                    StrokeColor = "Red",
+                    Width = 10,
+                    Height = 10,
+                    CallSign = General.NameGenerator.GenerateName(7)
+                };
             
-            Targets.Add(new CanvasItem(rd1.Next(20,1900),rd1.Next(20,1000),0,target));
-        }
+                Targets.Add(new CanvasItem(rd1.Next(20,1900),rd1.Next(20,1000),0,target));
+            }
+        });
+        
 
         await StartNow();
     }

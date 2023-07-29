@@ -3,8 +3,13 @@
              x:Class="Cagaya.App"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
+             
     <Application.Styles>
-        <FluentTheme />
+        <StyleInclude Source="avares://SukiUI/Theme/Index.xaml" />
     </Application.Styles>
+             
+     <Application.Resources>
+         <Color x:Key="SukiPrimaryColor">ForestGreen</Color>
+         <Color x:Key="SukiPrimaryColorGradient">Green</Color>
+     </Application.Resources>
 </Application>

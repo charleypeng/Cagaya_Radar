@@ -6,6 +6,8 @@
         xmlns:views="clr-namespace:Cagaya.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Cagaya.Views.MainWindow"
+        Background="{DynamicResource SukiBackground}"
+        Foreground="{DynamicResource SukiPrimaryColor}"
         Icon="/Assets/avalonia-logo.ico"
         Title="Cagaya">
     <NativeMenu.Menu>
