@@ -43,8 +43,8 @@
                 </StackPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Racing追赶图表">
-            <charts:RacingChart></charts:RacingChart>
+        <TabItem Header="Racing">
+          
         </TabItem>
     </TabControl>
     

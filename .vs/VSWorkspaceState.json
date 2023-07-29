@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Blazor",
+    "\\Blazor\\Cagaya",
+    "\\Cagaya"
   ],
-  "SelectedNode": "\\C:\\Users\\charley\\Source\\Repos\\cagaya_radar",
+  "SelectedNode": "\\Blazor\\Cagaya\\Cagaya.sln",
   "PreviewInSolutionExplorer": false
 }
