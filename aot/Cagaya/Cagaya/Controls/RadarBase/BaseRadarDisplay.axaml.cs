@@ -27,7 +27,7 @@ public partial class BaseRadarDisplay : UserControl
     private void InitializeComponent()
     {
         AvaloniaXamlLoader.Load(this);
-        btntest = this.FindControl<Button>("btntest");
+
     }
 
     private async void Btntest_OnClick(object? sender, RoutedEventArgs e)
@@ -36,7 +36,7 @@ public partial class BaseRadarDisplay : UserControl
         await Task.Delay(TimeSpan.FromSeconds(1));
         foreach (var w in wid)
         {
-            Canvas.SetLeft(btntest, w);
+
             await Task.Delay(TimeSpan.FromSeconds(3));
         }
         
