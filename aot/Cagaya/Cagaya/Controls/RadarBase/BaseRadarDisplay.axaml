@@ -44,8 +44,12 @@
                     <StackPanel Orientation="Horizontal" 
                                 Canvas.Left="{Binding Left}"
                                 Canvas.Top="{Binding Top}">
-                        <TextBox Text="Run Fast!"></TextBox>
-                        <TextBlock Text="{Binding Path=Item.CallSign}"></TextBlock>
+						<StackPanel Orientation="Vertical">
+							<TextBlock Text="{Binding Path=Item.CallSign}"></TextBlock>
+							<TextBlock Text="{Binding Path=Item.StrokeColor}"></TextBlock>
+							<TextBlock Text="{Binding Path=Left}"></TextBlock>
+							<TextBlock Text="{Binding Path=Top}"></TextBlock>
+						</StackPanel>
                         <Ellipse Stroke="Red" 
                                  StrokeThickness="2"
                                  Width="10" 
