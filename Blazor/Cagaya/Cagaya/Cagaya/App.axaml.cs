@@ -5,6 +5,7 @@ using AvaloniaBlazorWebView;
 using Cagaya.ViewModels;
 using Cagaya.Views;
 using Cagaya.BlazorView;
+using Toolbelt.Blazor.Extensions.DependencyInjection;
 namespace Cagaya;
 
 public partial class App : Application
@@ -31,6 +32,7 @@ public partial class App : Application
             setting.ResourceAssembly = typeof(BlazorView.RockStar).Assembly;
         }, inject =>
         {
+            inject.AddSpeechSynthesis();
             //you can inject the resource in this
             //inject.AddSingleton<WeatherForecastService>();
         });

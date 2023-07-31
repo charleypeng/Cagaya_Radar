@@ -50,7 +50,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         {
             Targets = new ObservableCollection<CanvasItem<Target>>();
             var rd1 = new Random();
-            for (int i = 0; i < 300; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 var target = new Target
                 {

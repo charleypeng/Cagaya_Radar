@@ -6,12 +6,9 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Cagaya.Views.MainView"
              x:DataType="vm:MainViewModel">
-	<TabControl>
-		<TabItem Header="web">
-			<BlazorWebView HostPage="wwwroot/index.html"></BlazorWebView>
-		</TabItem>
-		<TabItem Header="幅度萨芬"></TabItem>
-	</TabControl>
+	<Grid>
+		<BlazorWebView HostPage="wwwroot/index.html"></BlazorWebView>
+	</Grid>
 
 
 </UserControl>
