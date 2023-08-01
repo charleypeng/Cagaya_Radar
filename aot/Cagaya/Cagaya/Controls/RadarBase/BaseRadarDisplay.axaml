@@ -51,7 +51,7 @@
 							<TextBlock Text="{Binding Path=Top}"></TextBlock>
 						</StackPanel>
                         <Ellipse Stroke="Red" 
-                                 StrokeThickness="2"
+                                 StrokeThickness="1"
                                  Width="10" 
                                  Height="10"
                                  Fill="Transparent"/>
