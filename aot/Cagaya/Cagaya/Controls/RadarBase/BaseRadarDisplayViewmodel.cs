@@ -20,6 +20,10 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
     private event EventHandler? radarOutput;
     public double? OWidth { get; set; } = 10;
     public double? OHeight { get; set; } = 10;
+
+    [ObservableProperty]
+    private string? _logText = "Logger";
+    
     public BaseRadarDisplayViewModel()
     {
 
@@ -104,6 +108,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
                 
                 radarOutput?.Invoke(_t, null!);
                 await Task.Delay(100);
+                LogText = $"current txt:{_t?.Item?.CallSign}:{_t?.Top}:{_t?.Left}";
             }
         }
     }
