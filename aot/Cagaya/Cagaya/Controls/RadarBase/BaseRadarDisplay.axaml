@@ -36,7 +36,18 @@
                                 Canvas.Left="{Binding Left}"
                                 Canvas.Top="{Binding Top}">
 						<StackPanel Orientation="Vertical">
-							<TextBlock Text="{Binding Path=Item.CallSign}"></TextBlock>
+							<TextBlock Text="{Binding Path=Item.CallSign}">
+                                <TextBlock.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="TestRUn">
+                                            <MenuItem Header="Wow"></MenuItem>
+                                            <MenuItem Header="gw"></MenuItem>
+                                            <MenuItem Header="wgh"></MenuItem>
+                                        </MenuItem>
+                                        
+                                    </ContextMenu>
+                                </TextBlock.ContextMenu>
+                            </TextBlock>
 							<TextBlock Text="{Binding Path=Item.StrokeColor}"></TextBlock>
 							<TextBlock Text="{Binding Path=Left}"></TextBlock>
 							<TextBlock Text="{Binding Path=Top}"></TextBlock>

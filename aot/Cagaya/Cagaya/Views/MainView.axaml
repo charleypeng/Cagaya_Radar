@@ -46,6 +46,9 @@
         <TabItem Header="Racing追赶图表">
             <charts:RacingChart></charts:RacingChart>
         </TabItem>
+        <TabItem Header="NIhao">
+            <radar:Display></radar:Display>
+        </TabItem>
     </TabControl>
     
 </UserControl>

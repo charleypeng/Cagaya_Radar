@@ -54,7 +54,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         {
             Targets = new ObservableCollection<CanvasItem<Target>>();
             var rd1 = new Random();
-            for (int i = 0; i < 200; i++)
+            for (int i = 0; i < 50; i++)
             {
                 var target = new Target
                 {
@@ -69,7 +69,7 @@ public partial class BaseRadarDisplayViewModel : ObservableObject
         });
         
 
-        await StartNow();
+        //await StartNow();
     }
 
     private async Task StartNow()
